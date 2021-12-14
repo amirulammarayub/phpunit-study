@@ -7,6 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+const Vuetify = require('vuetify');
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,7 +20,13 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+Vue.use(Vuetify);
+
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component(
+    "product-table",
+    require("./components/ProductTable.vue").default
+);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

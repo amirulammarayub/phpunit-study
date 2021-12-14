@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * Show the product table page.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function productindex()
+    {
+        return view('products');
+    }
 }
