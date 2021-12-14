@@ -7,7 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
-const Vuetify = require('vuetify');
+import Vuetify from '../plugins/vuetify';
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,9 +19,6 @@ const Vuetify = require('vuetify');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-Vue.use(Vuetify);
-
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component(
     "product-table",
@@ -35,5 +32,6 @@ Vue.component(
  */
 
 const app = new Vue({
+    vuetify : Vuetify,
     el: '#app',
 });
